@@ -1,0 +1,24 @@
+:root {
+  --container: 10px;
+
+  @include breakpoint(md) {
+    --container: 22px;
+  }
+
+  @include breakpoint(lg) {
+    --container: 20px;
+  }
+}
+$container: var(--container);
+
+.container {
+  margin: 0 auto;
+  padding-left: $container;
+  padding-right: $container;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  box-sizing: border-box;
+}
+

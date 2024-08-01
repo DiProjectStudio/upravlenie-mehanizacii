@@ -1,0 +1,61 @@
+.breadcrumbs {
+  padding-top: 20px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+.breadcrumbs-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  overflow: auto;
+}
+
+.breadcrumbs-item {
+  @include flexAlignCenter;
+  font-family: $mainFont;
+  font-style: normal;
+  color: $gray-text;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  //@include textLimit(1);
+  position: relative;
+  white-space: nowrap;
+
+  &:first-child {
+    overflow: unset;
+  }
+
+  &:not(:last-child) {
+    &::after {
+      position: absolute;
+      display: block;
+      content: '/';
+      top: calc(50% - 10px);
+      right: -19px;
+      font-size: 16px;
+    }
+  }
+
+
+}
+
+//.breadcrumbs-separator {
+//  color: $gray-text;
+//  font-size: 16px;
+//  font-style: normal;
+//  font-weight: 500;
+//  line-height: 130%;
+//  margin: 0 12px;
+//  @include breakpoint(md) {
+//    margin: 0 8px;
+//  }
+//
+//}
+
+.breadcrumbs-item span {
+  user-select: none;
+}

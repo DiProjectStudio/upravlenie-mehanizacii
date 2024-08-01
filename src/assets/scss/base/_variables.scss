@@ -1,0 +1,37 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-brand: #FF7A00;
+    --color-black: #161616;
+    --color-stroke: #E2E2E2;
+    --color-light-gray: #F5F5F5;
+    --color-gray-text: #161616;
+    --color-gray-01: #222222;
+    --color-gray-02: #333333;
+    --color-gray-03: #7D7D7D;
+    --color-link: #D0530C;
+    --color-dark: #1B1B1B;
+    --color-hover-button-orange: #E35F00;
+    --color-hover-button-gray: #F5F5F5;
+    --color-hover-button-black: #555555;
+    --transition-style: all .3s ease;
+    --btn-border-radius: 10px;
+    --btn-border-black: #161616;
+}
+
+$white: var(--color-white);
+$brand: var(--color-brand);
+$black: var(--color-black);
+$stroke: var(--color-stroke);
+$light-gray: var(--color-light-gray);
+$gray-text: var(--color-gray-text);
+$gray-01: var(--color-gray-01);
+$gray-02: var(--color-gray-02);
+$gray-03: var(--color-gray-03);
+$link: var(--color-link);
+$dark: var(--color-dark);
+$hover-button-orange: var(--color-hover-button-orange);
+$hover-button-gray: var(--color-hover-button-gray);
+$hover-button-black: var(--color-hover-button-black);
+$transition: var(--transition-style);
+$btn-border-radius: var(--btn-border-radius);
+

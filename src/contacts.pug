@@ -1,0 +1,62 @@
+---
+title: 'Страница | Контакты'
+bodyClass: contacts-page
+yandexMap: true
+---
+
+extends includes/_page
+include components/_breadcrumbs
+
+block main
+    +breadcrumbs('', ['Контакты'])
+
+    section.contacts
+        .container
+            .contacts__inner
+                .contacts__inner-text
+                    h1 Контакты
+                    .contacts__text_block
+                        .title Фактический (почтовый) адрес:
+                        .description
+                            .image
+                                +img('header/location-marker.svg')
+                            .text г. Москва, ул. Талалихина, дом. 41, стр. 9
+                    .contacts__text_block
+                        .title Адрес производства:
+                        .description
+                            .image
+                                +img('header/location-marker.svg')
+                            .text г. Серпухов, ул. Пушкина, д. 45, Бизнес-парк «Развитие»
+                    .contacts__text_block
+                        .title Телефон/Факс:
+                        .description
+                            .image
+                                +img('header/phone.svg')
+                            .text
+                                a(href="tel:79857864068") +7 985 786-40-68
+                    .contacts__text_block
+                        .title Email:
+                        .description
+                            .description__emails
+                                .email
+                                    .image
+                                        +img('header/mail.svg')
+                                    .text
+                                        a(href='mailto:info@ym333.ru') info@ym333.ru
+                                .email
+                                    .image
+                                        +img('header/mail.svg')
+                                    .text
+                                        a(href='mailto:aoym333@gmail.com') aoym333@gmail.com
+
+                .contacts__inner-map
+                    script.
+                      let placemarks = [
+                          {
+                              coordinates: [55.72822400966594,37.68620459126282],
+                          }
+                        ];
+                      let centerPoint = [55.72822400966594,37.68550459126282];
+                      let zoomValue = 17;
+                    .map__wrapper
+                        #map

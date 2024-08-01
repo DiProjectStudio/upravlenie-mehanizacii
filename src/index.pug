@@ -1,0 +1,238 @@
+---
+title: 'Страница | Главная'
+bodyClass: main-page
+//yandexMap: true
+---
+
+extends includes/_page
+
+block main
+    section.main-banners
+        .container
+            .main-banners__inner
+                .main-banner__image
+                    +img('main-page/main-banner-image.png')
+                .image-filter
+                picture
+                    source(srcset="assets/images/lightnings/top.png", media="(min-width: 1200px)")
+                    +img('lightnings/top.png')
+                .main-banner__items
+                    .main-banner__item.main-banner__item-1.bg-orange
+                        .main-banner__item-name Водопонижение
+                        .main-banner__item-text выполним работы или предоставим в аренду
+                    .main-banner__item.main-banner__item-2
+                        .main-banner__item-name Аренда и продажа
+                        .main-banner__item-text строительного оборудования
+                    .main-banner__item.main-banner__item-3
+                        .main-banner__item-name Щитовая и микрощитовая
+                        .main-banner__item-text проходка
+                    .main-banner__item.main-banner__item-4
+                        .main-banner__item-name Изготовление металлоконструкций
+                    .main-banner__item.main-banner__item-5
+                        .main-banner__item-name Шахтные кольца крепления
+    section.benefits
+        .container
+            .benefits__inner
+                .benefits__items
+                    .benefits-item
+                        .benefits-item__image
+                            +img('benefits/01.svg')
+                        .benefits-item__text
+                            .title Качественно
+                            .description Высокое качество продукции и производства работ. Контроль на всеx этапах
+                    .benefits-item
+                        .benefits-item__image
+                            +img('benefits/02.svg')
+                        .benefits-item__text
+                            .title Быстро
+                            .description Самые быстрые сроки выполнения заказов
+                    .benefits-item
+                        .benefits-item__image
+                            +img('benefits/03.svg')
+                        .benefits-item__text
+                            .title Профессионально
+                            .description У нас работают профессионалы своего дела, квалифицированные специалисты
+                    .benefits-item
+                        .benefits-item__image
+                            +img('benefits/04.svg')
+                        .benefits-item__text
+                            .title Наш или ваш материал
+                            .description Вы можете предоставить свой материал, из которого мы изготовим продукцию
+
+
+
+    section.services
+        .container
+            .services__inner
+                .services__title Наши услуги
+                .services__items
+                    .services__item.services__item-1
+                        .image
+                            +img('services/water-proof.svg')
+                        .title Водопонижение
+                        .subtitles
+                            .subtitle Установка вакуумного водопонижения
+                            .subtitle Эжекторные установки
+                            .subtitle Водоотведение
+                    .services__item.services__item-2
+                        .image
+                            +img('services/rent.svg')
+                        .title Аренда оборудования
+                        .subtitles
+                            .subtitle Щит проходнический ПЩМ
+                            .subtitle Продавливание стального футляра (установки)
+                            .subtitle Тоннельная опалубка
+                            .subtitle Кран СПК-1000,2000
+                            .subtitle Микрощит AVN
+                    .services__item.services__item-3
+                        .image
+                            +img('services/safety.svg')
+                        .title Выполняемые работы
+                        .subtitles
+                            .subtitle Устройство защитных экранов (под автодорогами, железнодорожными путями)
+                            .subtitle Устройство стальных и железобетонных футляров а также коллекторов под железнодорожными путями
+                            .subtitle Проходка шахтных стволов (деревянным креплением а также железобетонными кольцами) любых диаметров.
+                            .subtitle Устройство котлованов в трудных условиях
+                            .subtitle Щитовые проходки
+                            .subtitle Санация труб методом навивки а также труба в трубе
+                            .subtitle Бурошнековое бурение
+                    .services__item.services__item-4
+                        .image
+                            +img('services/rigging.svg')
+                        .title Металлоконструкции
+                        .subtitles
+                            .subtitle Шахтные кольца крепления
+                            .subtitle Секции ограждений
+                            .subtitle Лестницы для колодцев
+                            .subtitle Закладные детали и конструкции
+    section.work-scheme
+        .container
+            .work-scheme__inner
+                .work-scheme__title Схема работ
+                .work-scheme__items
+                    .work-scheme__item
+                        .top
+                            .number 1
+                            .arrow
+                                +img('scheme/arrow-right.svg')
+                        .text Звонок, письмо на email, заявка через сайт
+                    .work-scheme__item
+                        .top
+                            .number 2
+                            .arrow
+                                +img('scheme/arrow-right.svg')
+                        .text Согласование условий заказа
+                    .work-scheme__item
+                        .top
+                            .number 3
+                            .arrow
+                                +img('scheme/arrow-right.svg')
+                        .text Заключение договора
+                    .work-scheme__item
+                        .top
+                            .number 4
+                            .arrow
+                                +img('scheme/arrow-right.svg')
+                        .text Оплата заказа
+                    .work-scheme__item
+                        .top
+                            .number 5
+                            .arrow
+                                +img('scheme/arrow-right.svg')
+                        .text Выполнение работ, предоставление оборудования
+                    .work-scheme__item.work-scheme__item-submit
+                        .check
+                            +img('scheme/check.svg')
+                        .text Оставьте нам заявку, мы свяжемся с вами в ближайшее время
+                        a(href="javascript:void(0)").btn.btn-white.work-scheme__button Оставить заявку
+    section.objects
+        .container
+            .objects__inner
+                .objects__title Фото объектов
+                .objects__items
+                    .objects__item
+                        .image
+                            +img('objects/object-1.png')
+                        .content
+                            .text
+                                .title Водопонижение и строительство
+                                .description Водопонижение и строительство водостока. Объект г.Москва станция Рижская
+                            .objects__button.btn.btn-transparent Оставить заявку
+                    .objects__item
+                        .image
+                            +img('objects/object-2.png')
+                        .content
+                            .text
+                                .title Водопонижение и строительство
+                                .description Водопонижение и строительство сети водопровода г.Подольск станция Подольск
+                            .objects__button.btn.btn-transparent Оставить заявку
+                    .objects__item
+                        .image
+                            +img('objects/object-3.png')
+                        .content
+                            .text
+                                .title Водопонижение
+                                .description Водопонижение Объект г.Москва Комсомольская площадь Строительство первоочередного парка для обслуживания поездов Сапсан
+                            .objects__button.btn.btn-transparent Оставить заявку
+                    .objects__item
+                        .image
+                            +img('objects/object-4.png')
+                        .content
+                            .text
+                                .title Водопонижение
+                                .description Водопонижение Объект г.Раменское ст.Раменское
+                            .objects__button.btn.btn-transparent Оставить заявку
+                .objects__button-add.btn.btn-orange Ещё объекты
+    section.questions
+        .questions__bg
+            +img('questions/questions-image.png')
+        .container
+            .questions__inner
+                .questions__title
+                    .small-text Напишите нам!
+                    .big-text Есть вопросы?
+                .questions__form
+                    form
+                        .questions__inputs
+                            .input.input-1
+                                input(placeholder='Ваше имя*', type='text').custom-input
+                            .input.input-2
+                                input(placeholder='Ваш телефон*', type='tel').phone-mask.custom-input
+                            .input.input-3
+                                input(placeholder='Электроння почта', type='text').custom-input
+                            .input.input-4
+                                textarea(placeholder='Сообщение:').custom-input
+                        .bottom
+                            button.btn.btn-orange.questions__button(type='button') Оставить заявку
+                            .questions__agree Отправляя данные, вы соглашаетесь с политикой конфиденциальности, на сбор и обработку персональных данных.
+
+    section.partners
+        picture
+            source(srcset="assets/images/lightnings/bottom-big.png", media="(min-width: 1600px)")
+            source(srcset="assets/images/lightnings/bottom-middle.png", media="(min-width: 1200px)")
+            source(srcset="assets/images/lightnings/bottom-small.png", media="(min-width: 744px)")
+            +img('lightnings/bottom-mini.png')
+
+        .container
+            .partners__inner
+                .partners__title Наши партнёры
+                .partners__items
+                    .partners__item
+                        .image
+                            +img('partners/image-1.png')
+                    .partners__item
+                        .image
+                            +img('partners/image-2.png')
+                    .partners__item
+                        .image
+                            +img('partners/image-3.png')
+                    .partners__item
+                        .image
+                            +img('partners/image-4.png')
+                    .partners__item
+                        .image
+                            +img('partners/image-5.png')
+                    .partners__item
+                        .image
+                            +img('partners/image-6.png')
+

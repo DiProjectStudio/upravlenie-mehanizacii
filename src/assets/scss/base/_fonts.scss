@@ -1,0 +1,11 @@
+:root {
+  --font-family-main: 'Inter', sans-serif;
+  --font-family-logo: 'Exo-2', sans-serif;
+}
+
+$mainFont: var(--font-family-main);
+$logoFont: var(--font-family-logo);
+
+body {
+  font-family: $mainFont;
+}

@@ -1,0 +1,78 @@
+include _mixins
+block header
+
+    header#header.header
+        .header__top
+            .container
+                .header__content
+                    a(href="/").header__logo
+                        .header__logo-image
+                            +img('header/logo.svg')
+                        .header__logo-text Управление механизации
+                            span  333
+
+                    .header__contacts.header__contacts_items#header__contacts
+                        .header__phone.header__contacts_item
+                            .header__phone-image.header__image
+                                +img('header/phone.svg')
+                            .header__phone-text.header__text
+                                a(href="tel:79857864068") +7 985 786-40-68
+                        .header__address.header__contacts_item
+                            .header__address-image.header__image
+                                +img('header/location-marker.svg')
+                            .header__address-text.header__text г. Москва, ул. Талалихина, дом. 41, стр. 9
+                        .header__mail.header__contacts_item
+                            .header__mail-image.header__image
+                                +img('header/mail.svg')
+                            .header__mail-text.header__text
+                                a(href="mailto:info@ym333.ru") info@ym333.ru
+                        .header__mail.header__contacts_item
+                            .header__mail-image.header__image
+                                +img('header/mail.svg')
+                            .header__mail-text.header__text
+                                a(href="mailto:aoym333@gmail.com") aoym333@gmail.com
+                    .header__burger#burger
+                        +img('header/burger.svg')
+
+        .header__bottom#headerBottom
+            .container
+                nav.header__menu-nav.menu-nav__catalog
+                    .navbar-close#navbarClose
+                        +img('header/close.svg')
+                    ul.menu-nav__list
+                        li.list-item
+                            a.link
+                                span Водопонижение
+                        li.list-item.action-link
+                            a.link
+                                span Металлоконструкции
+                                +img('header/chevron-down.svg')
+                            .action-link__list
+                                ul.action-link__list_items
+                                    li.action-link__list_item
+                                        a(href='javascript:void(0)').link
+                                            span Шахтные кольца крепления
+                                    li.action-link__list_item
+                                        a(href='javascript:void(0)').link
+                                            span Секции ограждений
+                                    li.action-link__list_item
+                                        a(href='javascript:void(0)').link
+                                            span Лестницы для колодцев
+                                    li.action-link__list_item
+                                        a(href='javascript:void(0)').link
+                                            span Закладные детали и конструкции
+                        li.list-item
+                            a(href='rent.html').link
+                                span Аренда оборудования
+                                +img('header/chevron-down.svg')
+                        li.list-item
+                            a(href='services.html').link
+                                span Выполнение работ
+                                +img('header/chevron-down.svg')
+                        li.list-item
+                            a(href='categories.html').link
+                                span Продажа оборудования
+                                +img('header/chevron-down.svg')
+                        li.list-item
+                            a(href='contacts.html').link
+                                span Контакты

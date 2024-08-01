@@ -1,0 +1,29 @@
+---
+title: 'Страница | Описание категорий'
+bodyClass: rent-page
+---
+
+extends includes/_page
+include components/_breadcrumbs
+
+block main
+    +breadcrumbs('', ['Строительное водопонижение иглофильтрами — выполнение работ, аренда оборудования'])
+    section.categories
+        .container
+            .categories__inner
+
+                h1 Работы по водопонижению и аренда установок
+
+                .categories-block
+                    .categories-block_image
+                        +img('categories/1.png')
+                    .categories-block_text
+                        p Для локализации грунтовых вод вы можете у нас заказать:
+                        ul
+                            li эжекторные иглофильтры;
+                            li установки вакуумного водопонижения
+                        p Способ понижения грунтовых вод и используемое оборудование определяется исходя из мощности водонасыщенного слоя, величины снижения уровня грунтовых вод, конструкции будущего сооружения, коэффициентов фильтрации водовмещающих грунтов.
+                        a(href='order.html').btn.btn-orange
+                            .text Оформить заявку на выполнение работ или аренду оборудования
+                            .arrow
+                                +img('arrow-right.svg')

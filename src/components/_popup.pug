@@ -1,0 +1,28 @@
+block popups
+
+    // ПОПАП "ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК"
+    #popup-request.popup
+        .popup-title Нужна помощь?
+        .popup-subtitle Заполните все поля и получите консультацию
+
+        form.form.popup-request-form
+            .form-row
+                label Имя
+                input(type="text" name="popup-request-form_name" placeholder="Представьтесь")
+            .form-row
+                label Телефон
+                input(type="tel" name="popup-request-form_phone" placeholder="+7 (999) 999-99-99")
+            .form-row
+                label E-mail
+                input(type="email" name="popup-request-form_email" placeholder="example@mail.ru")
+
+            .form-action
+                button.btn.btn--black(type="submit") Отправить
+                p Отправляя заявку, я соглашаюсь с <a href="policy.html">обработкой персональных данных</a>
+
+    // ПОПАП "УСПЕШНО - ОБРАТНЫЙ ЗВОНОК"
+    #popup-success-request.popup.popup-success
+        .popup-title Ваша заявка успешно отправлено
+        .popup-subtitle Наши менеджеры свяжутся с вами в ближайшее время
+        .popup-actions
+            a(href='/').btn.btn--black Вернуться на главную

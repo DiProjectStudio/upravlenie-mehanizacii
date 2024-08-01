@@ -1,0 +1,271 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: .4s;
+  //color: $black-main-page;
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+
+
+body b {
+  font-weight: 700;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+
+  @include breakpoint(lg) {
+    width: 8px;
+    height: 10px;
+  }
+}
+
+::-webkit-scrollbar-track {
+
+}
+
+::-webkit-scrollbar-thumb {
+}
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+main {
+  min-height: calc(max(calc(100vh - 614px), 350px));
+  overflow: hidden;
+}
+
+.hide {
+  display: none !important;
+}
+
+#page {
+  position: relative;
+  min-width: 360px;
+  min-height: 100%;
+  max-width: 100%;
+  @include flexColumn;
+}
+
+#page::before {
+  content: '';
+}
+
+#page.bg-overlay::before {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+header.bg-overlay::before {
+  content: '';
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+
+//.overlay {
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  background-color: rgba(0, 0, 0, 0.5); /* Затемнение */
+//  display: none; /* Скрыто по умолчанию */
+//  z-index: 3; /* Убедитесь, что оно выше других элементов */
+//}
+
+section {
+  position: relative;
+}
+
+//li {
+//  list-style: none;
+//}
+
+/////////////////////
+/// INPUTS
+/////////////////////
+.custom-input {
+  border-radius: 12px;
+  background: $dark;
+  color: $white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 20px;
+  outline: none;
+  border: none;
+
+  &::placeholder {
+    color: $white;
+    font-size: 16px;
+  }
+}
+
+
+/////////////////////
+/// BUTTONS
+/////////////////////
+.btn {
+  @include flexCenterCenter;
+  border-radius: $btn-border-radius;
+  font-weight: 500;
+  transition: $transition;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 18px;
+
+
+  &.btn-orange {
+    background-color: $brand;
+    border: none;
+    color: $white;
+
+    &:hover {
+      background-color: $hover-button-orange;
+    }
+  }
+
+  &.btn-white {
+    background-color: $white;
+    color: $black;
+    border: none;
+
+    &:hover {
+      background-color: $hover-button-gray;
+    }
+  }
+
+  &.btn-transparent {
+    border: 1px solid $black;
+    background: transparent;
+    color: $black;
+
+    &:hover {
+      border: 1px solid $hover-button-black;
+      color: $hover-button-black;
+    }
+  }
+}
+
+
+/////////////////////
+/// LINKS
+/////////////////////
+a {
+  display: inline-block;
+}
+
+
+/////////////////////
+/// ICONS
+/////////////////////
+
+
+/////////////////////
+/// OTHERS
+/////////////////////
+
+
+
+/////////////////////
+/// CARDS & CATALOG
+/////////////////////
+
+
+/////////////////////
+/// TYPOGRAPHY
+/////////////////////
+
+
+
+/////////////////////
+/// SWIPER SLIDER
+/////////////////////
+
+
+.swiper-pagination {
+  align-self: center;
+  background-color: transparent;
+  height: 4px;
+  width: 61px;
+  @include flexCenterCenter;
+  position: absolute;
+  --swiper-pagination-bottom: 24px;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-horizontal-gap: 7px;
+  --swiper-pagination-bullet-border-radius: 0;
+  --swiper-pagination-bullet-height: 4px;
+  --swiper-pagination-bullet-width: 60px;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  //background: $opacity-white-72;
+
+  @include breakpoint(md) {
+    --swiper-pagination-bullet-horizontal-gap: 14px;
+  }
+  @include breakpoint(lg) {
+    --swiper-pagination-bullet-horizontal-gap: 16px;
+  }
+
+  &:hover {
+    background: $white;
+
+    .swiper-pagination-bullet-active {
+      //background: $opacity-pink-72;
+    }
+  }
+
+  &.swiper-pagination-bullet-active {
+    //background: $pink;
+  }
+}
+
+.swiper-nav {
+  position: absolute;
+  @include flexAlignCenter;
+  z-index: 1;
+  gap: 8px;
+
+  @include breakpoint(md) {
+    gap: 20px;
+  }
+  @include breakpoint(xl) {
+    gap: 40px;
+  }
+
+  .swiper-nav-arrow {
+    width: 60px;
+    height: 56px;
+    cursor: pointer;
+    @include flexCenterCenter;
+  }
+}
