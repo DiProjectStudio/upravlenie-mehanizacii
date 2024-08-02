@@ -1,115 +1,103 @@
-.rent-page {
-  .container {
-    .rent__inner {
-      h1 {
-        margin-bottom: 20px;
+.rent {
+  .rent__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-        @include breakpoint(lg) {
-          font-size: 42px;
-        }
-      }
+    @include breakpoint(md) {
+      padding-bottom: 100px;
+    }
 
-      p {
-        line-height: 160%;
-        margin-bottom: 30px;
-      }
+    @include breakpoint(lg) {
+      padding-bottom: 120px;
+    }
 
-      h1, p {
-        max-width: 963px;
-      }
+    h1 {
+      margin-bottom: 20px;
 
-      .rent-items {
-        padding-top: 60px;
-        padding-bottom: 60px;
-        display: grid;
-        grid-auto-rows: fit-content(100%);
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
+    }
 
-        @include breakpoint(md) {
-          padding-bottom: 100px;
-          grid-template-columns: repeat(2, 1fr);
-          grid-column-gap: 10px;
-        }
+    p {
+      line-height: 160%;
+      margin-bottom: 30px;
+    }
 
-        @include breakpoint(lg) {
-          grid-column-gap: 20px;
-          padding-bottom: 120px;
-        }
+    h1, p {
+      max-width: 963px;
+    }
 
-        @include breakpoint(xl) {
-          grid-gap: 30px;
-        }
-        .rent-item {
-          border-radius: 24px;
-          background: $light-gray;
-          padding: 20px;
-          display: grid;
-          grid-auto-rows: fit-content(100%);
-          grid-template-columns: 1fr;
-          grid-gap: 10px;
+    a {
+      width: 100%;
 
-          @include breakpoint(lg) {
-            grid-template-columns: 130px 1fr;
-          }
-
-          @include breakpoint(xl) {
-            grid-template-columns: 200px 1fr;
-            grid-column-gap: 20px;
-          }
-          .rent-item_image {
-            border-radius: 20px;
-            height: fit-content;
-
-            //@include breakpoint(lg) {
-            //  width: 130px;
-            //  height: 130px;
-            //}
-          }
-          .rent-item_text {
-            .title {
-              color: $black;
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 130%;
-              margin-bottom: 10px;
-            }
-
-            .description {
-              color: $gray-text;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 160%;
-            }
-          }
-        }
+      @include breakpoint(md) {
+        width: fit-content;
       }
     }
   }
 }
 
-
-
-
-
-a.btn.btn-orange {
-  padding: 16px 24px;
-  @include flexCenterCenter;
-  line-height: 150%;
-  margin-bottom: 0;
-  width: 100%;
+.rent-items {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 
   @include breakpoint(md) {
-    width: fit-content;
+    padding-bottom: 100px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
   }
 
-  .arrow {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    @include flexAlignCenter;
-    margin-left: 10px;
+  @include breakpoint(lg) {
+    grid-column-gap: 20px;
+    padding-bottom: 120px;
+  }
+
+  @include breakpoint(xl) {
+    gap: 30px;
+  }
+
+  .rent-item {
+    border-radius: 24px;
+    background: $light-gray;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    @include breakpoint(lg) {
+      grid-template-columns: 130px 1fr;
+    }
+
+    @include breakpoint(xl) {
+      grid-template-columns: 200px 1fr;
+      grid-column-gap: 20px;
+    }
+
+    &_image {
+      border-radius: 20px;
+      height: fit-content;
+    }
+
+    &_text {
+
+      p {
+        &:first-child {
+          color: $black;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 130%;
+          margin-bottom: 10px;
+        }
+
+        &:last-child {
+          color: $gray-text;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%;
+        }
+      }
+    }
   }
 }

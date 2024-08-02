@@ -1,5 +1,5 @@
 .services-page {
-  .services-page__inner {
+  &__inner {
     padding-top: 40px;
     padding-bottom: 60px;
     @include breakpoint(md) {
@@ -103,10 +103,6 @@
         }
       }
     }
-  }
-
-  &:nth-child(3) {
-
   }
 }
 

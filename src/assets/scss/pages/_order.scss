@@ -144,6 +144,7 @@
             order: 1;
             display: grid;
             gap: 12px;
+
             @include breakpoint(lg) {
               order: 2;
               gap: 10px;
