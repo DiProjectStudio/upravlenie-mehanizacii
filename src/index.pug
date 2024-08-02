@@ -138,10 +138,10 @@ block main
                             .work-scheme__item-top_arrow
                                 +img('scheme/arrow-right.svg')
                         .work-scheme__item-text Выполнение работ, предоставление оборудования
-                    .work-scheme__item.work-scheme__item-submit
-                        .work-scheme__item-submit_check
+                    .work-scheme__item.bg-orange
+                        .work-scheme__item-check
                             +img('scheme/check.svg')
-                        .work-scheme__item-submit_text Оставьте нам заявку, мы свяжемся с вами в ближайшее время
+                        .work-scheme__item-text Оставьте нам заявку, мы свяжемся с вами в ближайшее время
                         a(href="javascript:void(0)").btn.btn-white.work-scheme__button Оставить заявку
     section.objects
         .container
@@ -149,36 +149,36 @@ block main
                 .objects__title Фото объектов
                 .objects__items
                     .objects__item
-                        .image
+                        .objects__item-image
                             +img('objects/object-1.png')
-                        .content
-                            .text
-                                .title Водопонижение и строительство
-                                .description Водопонижение и строительство водостока. Объект г.Москва станция Рижская
+                        .objects__item-content
+                            .objects__item-content_text
+                                p Водопонижение и строительство
+                                p Водопонижение и строительство водостока. Объект г.Москва станция Рижская
                             .objects__button.btn.btn-transparent Оставить заявку
                     .objects__item
-                        .image
+                        .objects__item-image
                             +img('objects/object-2.png')
-                        .content
-                            .text
-                                .title Водопонижение и строительство
-                                .description Водопонижение и строительство сети водопровода г.Подольск станция Подольск
+                        .objects__item-content
+                            .objects__item-content_text
+                                p Водопонижение и строительство
+                                p Водопонижение и строительство сети водопровода г.Подольск станция Подольск
                             .objects__button.btn.btn-transparent Оставить заявку
                     .objects__item
-                        .image
+                        .objects__item-image
                             +img('objects/object-3.png')
-                        .content
-                            .text
-                                .title Водопонижение
-                                .description Водопонижение Объект г.Москва Комсомольская площадь Строительство первоочередного парка для обслуживания поездов Сапсан
+                        .objects__item-content
+                            .objects__item-content_text
+                                p Водопонижение
+                                p Водопонижение Объект г.Москва Комсомольская площадь Строительство первоочередного парка для обслуживания поездов Сапсан
                             .objects__button.btn.btn-transparent Оставить заявку
                     .objects__item
-                        .image
+                        .objects__item-image
                             +img('objects/object-4.png')
-                        .content
-                            .text
-                                .title Водопонижение
-                                .description Водопонижение Объект г.Раменское ст.Раменское
+                        .objects__item-content
+                            .objects__item-content_text
+                                p Водопонижение
+                                p Водопонижение Объект г.Раменское ст.Раменское
                             .objects__button.btn.btn-transparent Оставить заявку
                 .objects__button-add.btn.btn-orange Ещё объекты
     section.questions
@@ -187,20 +187,20 @@ block main
         .container
             .questions__inner
                 .questions__title
-                    .small-text Напишите нам!
-                    .big-text Есть вопросы?
+                    p Напишите нам!
+                    p Есть вопросы?
                 .questions__form
                     form
-                        .questions__inputs
-                            .input.input-1
+                        .questions__form_inputs
+                            .input
                                 input(placeholder='Ваше имя*', type='text').custom-input
-                            .input.input-2
+                            .input
                                 input(placeholder='Ваш телефон*', type='tel').phone-mask.custom-input
-                            .input.input-3
+                            .input
                                 input(placeholder='Электроння почта', type='text').custom-input
-                            .input.input-4
+                            .input
                                 textarea(placeholder='Сообщение:').custom-input
-                        .bottom
+                        .questions__form_bottom
                             button.btn.btn-orange.questions__button(type='button') Оставить заявку
                             .questions__agree Отправляя данные, вы соглашаетесь с политикой конфиденциальности, на сбор и обработку персональных данных.
 
@@ -216,21 +216,21 @@ block main
                 .partners__title Наши партнёры
                 .partners__items
                     .partners__item
-                        .image
+                        .partners__item_image
                             +img('partners/image-1.png')
                     .partners__item
-                        .image
+                        .partners__item_image
                             +img('partners/image-2.png')
                     .partners__item
-                        .image
+                        .partners__item_image
                             +img('partners/image-3.png')
                     .partners__item
-                        .image
+                        .partners__item_image
                             +img('partners/image-4.png')
                     .partners__item
-                        .image
+                        .partners__item_image
                             +img('partners/image-5.png')
                     .partners__item
-                        .image
+                        .partners__item_image
                             +img('partners/image-6.png')
 

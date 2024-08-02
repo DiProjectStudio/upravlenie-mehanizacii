@@ -1,7 +1,6 @@
 .main-banner {
   padding-top: 20px;
 
-
   @include breakpoint(lg) {
     padding-top: 0;
   }
@@ -222,6 +221,7 @@
   }
 }
 
+
 .services {
   padding-top: 40px;
   padding-bottom: 60px;
@@ -252,58 +252,58 @@
         font-size: 40px;
       }
     }
+  }
+}
 
-    .services__items {
+.services__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint(lg) {
+    gap: 20px;
+  }
+
+  @include breakpoint(xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .services__item {
+    width: 100%;
+    border-radius: 24px;
+    padding: 24px;
+    @include breakpoint(md) {
+      height: 100%;
+    }
+
+    &-image {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 30px;
+    }
+
+    &-title {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    &-description {
       display: grid;
-      grid-template-columns: 1fr;
       gap: 10px;
 
-      @include breakpoint(md) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @include breakpoint(lg) {
-        gap: 20px;
-      }
-
-      @include breakpoint(xl) {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
-      .services__item {
-        width: 100%;
-        border-radius: 24px;
-        padding: 24px;
-        @include breakpoint(md) {
-          height: 100%;
-        }
-
-        &-image {
-          width: 60px;
-          height: 60px;
-          margin-bottom: 30px;
-        }
-
-        &-title {
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 500;
-          margin-bottom: 20px;
-        }
-
-        &-description {
-          display: grid;
-          gap: 10px;
-
-          p {
-            color: unset;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 130%;
-            margin-bottom: 0;
-          }
-        }
+      p {
+        color: unset;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        margin-bottom: 0;
       }
     }
   }
@@ -318,7 +318,6 @@
     padding-top: 80px;
     padding-bottom: 80px;
   }
-
 
   &__title {
     color: $black;
@@ -354,88 +353,81 @@
       grid-template-rows: repeat(2, 250px);
       gap: 30px;
     }
+  }
+}
 
-    .work-scheme__item {
-      width: 100%;
-      padding: 12px;
-      background: $white;
-      border-radius: 16px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+.work-scheme__item {
+  width: 100%;
+  padding: 12px;
+  background: $white;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-      @include breakpoint(md) {
-        padding: 30px;
-      }
+  @include breakpoint(md) {
+    padding: 30px;
+  }
 
-      &-top {
-        @include flexCenterBetween;
+  &-top {
+    @include flexCenterBetween;
 
-        &_number {
-          width: 40px;
-          height: 40px;
-          padding: 10px;
-          background: $brand;
-          color: $white;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 700;
-          text-transform: uppercase;
-          border-radius: 8px;
-          @include flexCenterCenter;
-        }
+    &_number {
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+      background: $brand;
+      color: $white;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 8px;
+      @include flexCenterCenter;
+    }
 
-        &_arrow {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          background: $light-gray;
-          padding: 8px;
-        }
-      }
-
-      &-text {
-        color: $black;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 130%;
-      }
-
-      &.work-scheme__item-submit {
-        background: $brand;
-
-        &_check {
-          width: 40px;
-          height: 40px;
-          background: $white;
-          border-radius: 8px;
-          @include flexCenterCenter;
-          margin-bottom: 16px;
-          padding: 8px;
-        }
-
-        &_text {
-          color: $white;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 130%;
-          margin-bottom: 16px;
-          max-width: 55%;
-
-          @include breakpoint(xl) {
-            max-width: 100%;
-          }
-        }
-
-        .work-scheme__button {
-          padding: 12px 16px;
-        }
-      }
+    &_arrow {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $light-gray;
+      padding: 8px;
     }
   }
 
+  &-text {
+    color: $black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+  }
+
+  &-check {
+    width: 40px;
+    height: 40px;
+    background: $white;
+    border-radius: 8px;
+    @include flexCenterCenter;
+    margin-bottom: 16px;
+    padding: 8px;
+  }
+
+  &:last-child {
+    .work-scheme__item-text {
+      margin-bottom: 16px;
+      max-width: 55%;
+      color: $white;
+
+      @include breakpoint(xl) {
+        max-width: 100%;
+      }
+    }
+
+    .work-scheme__button {
+      padding: 12px 16px;
+    }
+  }
 }
 
 .objects {
@@ -446,7 +438,6 @@
     padding-top: 80px;
     padding-bottom: 80px;
   }
-
 
   .objects__inner {
     .objects__title {
@@ -501,32 +492,32 @@
     }
   }
 
-  .container {
-    .questions__inner {
+
+  &__inner {
+    @include breakpoint(lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .questions__title {
+      color: $white;
+      width: min-content;
+      margin-bottom: 30px;
 
       @include breakpoint(lg) {
-        display: flex;
-        justify-content: space-between;
+        margin-right: 120px;
       }
 
-
-      .questions__title {
+      p {
         color: $white;
-        width: min-content;
-        margin-bottom: 30px;
 
-        @include breakpoint(lg) {
-          margin-right: 120px;
-        }
-
-
-        .small-text {
+        &:first-child {
           font-size: 20px;
           font-style: normal;
           font-weight: 500;
         }
 
-        .big-text {
+        &:last-child {
           font-size: 32px;
           font-style: normal;
           font-weight: 500;
@@ -537,95 +528,89 @@
           }
         }
       }
+    }
+  }
+}
 
-      .questions__form {
-        @include breakpoint(hd) {
-          max-width: 685px;
-        }
-
-        form {
-          .questions__inputs {
-            display: grid;
-            grid-auto-columns: 1fr;
-            grid-auto-rows: fit-content(100%);
-            grid-gap: 10px;
-            margin-bottom: 20px;
-            grid-template-areas:
-              "input-1"
-              "input-2"
-              "input-3"
-              "input-4";
-
-            @include breakpoint(md) {
-              grid-template-areas:
-                "input-1 input-2 input-3"
-                "input-4 input-4 input-4";
-            }
+.questions__form {
+  @include breakpoint(hd) {
+    max-width: 685px;
+  }
 
 
-            .input {
+  &_inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+    grid-template-areas:
+            "input-1"
+            "input-2"
+            "input-3"
+            "input-4";
 
-              input, textarea {
-                width: 100%;
-              }
-
-              textarea {
-                height: 212px;
-                resize: none;
-              }
-            }
-
-            .input-1 {
-              grid-area: input-1;
-            }
-
-            .input-2 {
-              grid-area: input-2;
-            }
-
-            .input-3 {
-              grid-area: input-3;
-            }
-
-            .input-4 {
-              grid-area: input-4;
-            }
-          }
+    @include breakpoint(md) {
+      grid-template-areas:
+              "input-1 input-2 input-3"
+              "input-4 input-4 input-4";
+    }
 
 
-        }
-
-        .bottom {
-
-          @include breakpoint(md) {
-            @include flexAlignCenter
-          }
-
-          .questions__button {
-            padding: 16px 24px;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 150%;
-            width: 100%;
-            margin-bottom: 20px;
-
-            @include breakpoint(md) {
-              margin-bottom: 0;
-              margin-right: 20px;
-            }
-          }
-
-          .questions__agree {
-            color: $light-gray;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 160%;
-          }
-
-        }
+    .input {
+      input, textarea {
+        width: 100%;
       }
+
+      textarea {
+        height: 212px;
+        resize: none;
+      }
+
+      &:nth-child(1) {
+        grid-area: input-1;
+      }
+
+      &:nth-child(2) {
+        grid-area: input-2;
+      }
+
+      &:nth-child(3) {
+        grid-area: input-3;
+      }
+
+      &:nth-child(4) {
+        grid-area: input-4;
+      }
+    }
+  }
+
+
+  &_bottom {
+    @include breakpoint(md) {
+      @include flexAlignCenter
+    }
+
+    .questions__button {
+      padding: 16px 24px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      width: 100%;
+      margin-bottom: 20px;
+
+      @include breakpoint(md) {
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+    }
+
+    .questions__agree {
+      color: $light-gray;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
     }
   }
 }
@@ -664,63 +649,57 @@
     }
   }
 
-  .container {
-    .partners__inner {
+
+  .partners__inner {
+    @include breakpoint(lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .partners__title {
+      color: $black;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      margin-bottom: 30px;
+
+      @include breakpoint(md) {
+        margin-bottom: 40px;
+      }
+
       @include breakpoint(lg) {
-        display: flex;
-        justify-content: space-between;
+        margin-bottom: 0;
+        font-size: 36px;
+        width: min-content;
+      }
+    }
+
+    .partners__items {
+      display: grid;
+      grid-template-columns: repeat(2, 165px);
+      grid-template-rows: repeat(3, 87px);
+      gap: 10px;
+      justify-content: center;
+
+      @include breakpoint(md) {
+        grid-template-columns: repeat(3, minmax(165px, 301px));
+        grid-template-rows: repeat(2, minmax(138px, 172px));
       }
 
-      .partners__title {
-        color: $black;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 500;
-        margin-bottom: 30px;
+      .partners__item {
+        background: $light-gray;
+        padding: 10px;
+        border-radius: 15px;
+        @include flexCenterCenter;
 
         @include breakpoint(md) {
-          margin-bottom: 40px;
+          padding: 30px 20px;
         }
 
-        @include breakpoint(lg) {
-          margin-bottom: 0;
-          font-size: 36px;
-          width: min-content;
-        }
-      }
-
-      .partners__items {
-        display: grid;
-        grid-template-columns: repeat(2, 165px);
-        grid-template-rows: repeat(3, 87px);
-        grid-gap: 10px;
-        justify-content: center;
-
-        @include breakpoint(md) {
-          grid-template-columns: repeat(3, minmax(165px, 301px));
-          grid-template-rows: repeat(2, minmax(138px, 172px));
-
-        }
-
-        @include breakpoint(lg) {
-
-        }
-
-        .partners__item {
-          background: $light-gray;
-          padding: 10px;
-          border-radius: 15px;
-          @include flexCenterCenter;
-
+        &_image {
           @include breakpoint(md) {
-            padding: 30px 20px;
-          }
-
-          .image {
-            @include breakpoint(md) {
-              width: 168px;
-              height: auto;
-            }
+            width: 168px;
+            height: auto;
           }
         }
       }
