@@ -1,203 +1,169 @@
-.main-banners {
-  .container {
-    height: fit-content;
-    padding-top: 20px;
+.main-banner {
+  padding-top: 20px;
+
+
+  @include breakpoint(lg) {
+    padding-top: 0;
+  }
+
+  &__inner {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: self-end;
+    padding: 10px;
 
     @include breakpoint(lg) {
-      padding-top: 0;
+      padding: 12px;
     }
 
-    .main-banners__inner {
-      position: relative;
-      height: 600px;
-      display: flex;
-      align-items: self-end;
-      padding: 10px;
+    .main-banner__image {
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
 
-      @include breakpoint(lg) {
-        padding: 12px;
+      @include breakpoint(md) {
+        border-radius: 40px;
       }
 
-      .main-banner__image {
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -2;
-
-        @include breakpoint(md) {
-          border-radius: 40px;
-        }
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-position: right;
-        }
-
-
+      img {
+        object-position: right;
       }
 
-      picture {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
 
-        @include breakpointMax(md) {
-          display: none;
-        }
+    }
+
+    picture {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+
+      @include breakpointMax(md) {
+        display: none;
       }
+    }
 
-      .image-filter {
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background: rgba(0, 0, 0, 0.4);
-        @include breakpoint(md) {
-          border-radius: 40px;
-        }
+    .image-filter {
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.4);
+      @include breakpoint(md) {
+        border-radius: 40px;
       }
+    }
+  }
+}
 
-      .main-banner__items {
-        display: grid;
-        justify-content: center;
-        grid-auto-rows: fit-content(100%);
-        grid-auto-columns: 1fr;
-        grid-row-gap: 4px;
-        width: 100%;
-        grid-template-areas:
+.main-banner__items {
+  display: grid;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-areas:
         "item-1"
         "item-2"
         "item-3"
         "item-4"
         "item-5";
 
-        @include breakpoint(md) {
-          grid-gap: 10px;
-          grid-template-columns: repeat(6, 1fr);
-          grid-template-rows: repeat(2, 120px);
-          grid-template-areas:
+  @include breakpoint(md) {
+    grid-gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 120px);
+    grid-template-areas:
           "item-1 item-1 item-2 item-2 item-3 item-3"
           "item-4 item-4 item-4 item-5 item-5 item-5";
-        }
+  }
 
-        @include breakpoint(lg) {
-          grid-template-columns: repeat(5, minmax(219px, 260px));
-          grid-template-rows: 120px;
-          grid-template-areas:
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(5, minmax(219px, 260px));
+    grid-template-rows: 120px;
+    grid-template-areas:
           "item-1 item-2 item-3 item-4 item-5";
-        }
+  }
 
-        .main-banner__item {
-          width: 100%;
-          padding: 10px;
-          border-radius: 10px;
-          justify-self: center;
-          margin-bottom: 4px;
-          height: fit-content;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-start;
+  .main-banner__item {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    justify-self: center;
+    display: grid;
+    align-items: center;
+    gap: 4px;
 
-          & + & {
-            margin-top: 4px;
-          }
+    @include breakpoint(md) {
+      height: 100%;
+      border-radius: 20px;
+    }
 
+    @include breakpoint(lg) {
+      border-radius: 20px;
+      padding-left: 20px;
+      word-wrap: normal;
+    }
 
-          @include breakpoint(md) {
-            height: 100%;
-            border-radius: 20px;
-          }
+    &:last-child {
+      margin-bottom: 0;
+    }
 
-          @include breakpoint(lg) {
-            border-radius: 20px;
-            padding-left: 20px;
-            word-wrap: normal;
-          }
+    &-name {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+    }
 
-          &:last-child {
-            margin-bottom: 0;
-          }
+    &-text {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
 
-          .main-banner__item-name {
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 130%;
-            margin-bottom: 4px;
-          }
-
-          .main-banner__item-text {
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 160%;
-
-            @include breakpoint(md) {
-              font-size: 16px;
-            }
-
-            @include breakpoint(lg) {
-              line-height: 130%;
-            }
-          }
-        }
-
-        .main-banner__item-1 {
-          background-color: $brand;
-          color: $white;
-          grid-area: item-1;
-        }
-
-        .main-banner__item-2 {
-          background-color: $black;
-          color: $white;
-          grid-area: item-2;
-        }
-
-        .main-banner__item-3 {
-          background-color: $white;
-          color: $black;
-          grid-area: item-3;
-
-          .main-banner__item-text {
-            font-size: 16px;
-            font-weight: 500;
-          }
-        }
-
-        .main-banner__item-4 {
-          background-color: $brand;
-          color: $white;
-          grid-area: item-4;
-          word-break: break-all;
-
-          @include breakpoint(xl) {
-            word-break: normal;
-          }
-        }
-
-        .main-banner__item-5 {
-          background-color: $white;
-          color: $black;
-          grid-area: item-5;
-        }
-
-        .main-banner__item-4, .main-banner__item-5 {
-          @include flexAlignCenter;
-        }
-
+      @include breakpoint(md) {
+        font-size: 16px;
       }
+
+      @include breakpoint(lg) {
+        line-height: 130%;
+      }
+    }
+
+    &:nth-child(1) {
+      grid-area: item-1;
+    }
+
+    &:nth-child(2) {
+      grid-area: item-2;
+    }
+
+    &:nth-child(3) {
+      grid-area: item-3;
+    }
+
+    &:nth-child(4) {
+      grid-area: item-4;
+      word-break: break-all;
+
+      @include breakpoint(xl) {
+        word-break: normal;
+      }
+    }
+
+    &:nth-child(5) {
+      grid-area: item-5;
     }
   }
 }
@@ -205,56 +171,50 @@
 .benefits {
   padding-top: 40px;
 
-  .container {
-    .benefits__inner {
-      .benefits__items {
-        display: grid;
-        grid-gap: 20px;
+  &__inner {
+    .benefits__items {
+      display: grid;
+      gap: 20px;
 
-        @include breakpoint(md) {
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(2, 1fr);
+      @include breakpoint(md) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+
+      @include breakpoint(lg) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+      }
+
+      .benefits-item {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+
+        &__image {
+          width: 30px;
+          height: 30px;
         }
 
-        @include breakpoint(lg) {
-          grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: 1fr;
-        }
+        &__text {
+          width: calc(100% - 45px);
+          display: grid;
+          gap: 10px;
 
-        .benefits-item {
-          display: flex;
-          align-items: baseline;
-          justify-content: space-between;
-
-
-          .benefits-item__image {
-            width: 30px;
-            height: 30px;
-
-            svg {
-              width: 100%;
-              height: 100%;
-            }
+          &-title {
+            color: $black;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
           }
 
-          .benefits-item__text {
-            width: calc(100% - 45px);
-
-            .title {
-              color: $black;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 500;
-              margin-bottom: 10px;
-            }
-
-            .description {
-              color: $gray-text;
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 160%;
-            }
+          &-description {
+            color: $gray-text;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
           }
         }
       }
@@ -274,102 +234,75 @@
     padding-top: 60px;
   }
 
-  .container {
-    .services__inner {
-      .services__title {
-        color: $black;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 500;
-        margin-bottom: 30px;
 
-        @include breakpoint(lg) {
-          margin-bottom: 40px;
-          font-size: 36px;
-        }
+  .services__inner {
+    .services__title {
+      color: $black;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      margin-bottom: 30px;
 
-        @include breakpoint(xl) {
-          font-size: 40px;
-        }
+      @include breakpoint(lg) {
+        margin-bottom: 40px;
+        font-size: 36px;
       }
 
-      .services__items {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-auto-rows: fit-content(100%);
-        grid-gap: 10px;
+      @include breakpoint(xl) {
+        font-size: 40px;
+      }
+    }
 
+    .services__items {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+
+      @include breakpoint(md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include breakpoint(lg) {
+        gap: 20px;
+      }
+
+      @include breakpoint(xl) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .services__item {
+        width: 100%;
+        border-radius: 24px;
+        padding: 24px;
         @include breakpoint(md) {
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: max-content;
+          height: 100%;
         }
 
-        @include breakpoint(lg) {
-          grid-gap: 20px;
+        &-image {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 30px;
         }
 
-        @include breakpoint(xl) {
-          grid-template-columns: repeat(4, 1fr);
+        &-title {
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          margin-bottom: 20px;
         }
 
-        .services__item {
-          width: 100%;
-          border-radius: 24px;
-          color: $white;
-          padding: 24px;
-          height: fit-content;
-          @include breakpoint(md) {
-            height: 100%;
-          }
+        &-description {
+          display: grid;
+          gap: 10px;
 
-          .image {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 30px;
-
-            svg {
-              width: 100%;
-              height: 100%;
-            }
-          }
-
-          .title {
-            font-size: 24px;
+          p {
+            color: unset;
+            font-size: 16px;
             font-style: normal;
             font-weight: 500;
-            margin-bottom: 20px;
+            line-height: 130%;
+            margin-bottom: 0;
           }
-
-          .subtitles {
-            .subtitle {
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 130%;
-              margin-bottom: 10px;
-
-              &:last-child {
-                margin-bottom: 0;
-              }
-            }
-          }
-        }
-
-        .services__item-1 {
-          background: $gray-02;
-        }
-
-        .services__item-2 {
-          background: $black;
-        }
-
-        .services__item-3 {
-          background: $brand;
-        }
-
-        .services__item-4 {
-          background: $light-gray;
-          color: $black;
         }
       }
     }
@@ -380,138 +313,129 @@
   background: $light-gray;
   padding-top: 60px;
   padding-bottom: 60px;
+
   @include breakpoint(md) {
     padding-top: 80px;
     padding-bottom: 80px;
   }
 
-  .container {
-    .work-scheme__inner {
-      .work-scheme__title {
-        color: $black;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 500;
-        margin-bottom: 40px;
 
-        @include breakpoint(lg) {
-          font-size: 36px;
+  &__title {
+    color: $black;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 40px;
+
+    @include breakpoint(lg) {
+      font-size: 36px;
+    }
+    @include breakpoint(xl) {
+      font-size: 40px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-rows: repeat(5, 120px);
+    grid-auto-columns: 1fr;
+    gap: 10px;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 270px);
+    }
+
+    @include breakpoint(lg) {
+      gap: 20px;
+    }
+
+    @include breakpoint(xl) {
+      grid-template-rows: repeat(2, 250px);
+      gap: 30px;
+    }
+
+    .work-scheme__item {
+      width: 100%;
+      padding: 12px;
+      background: $white;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include breakpoint(md) {
+        padding: 30px;
+      }
+
+      &-top {
+        @include flexCenterBetween;
+
+        &_number {
+          width: 40px;
+          height: 40px;
+          padding: 10px;
+          background: $brand;
+          color: $white;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          text-transform: uppercase;
+          border-radius: 8px;
+          @include flexCenterCenter;
         }
-        @include breakpoint(xl) {
-          font-size: 40px;
+
+        &_arrow {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: $light-gray;
+          padding: 8px;
         }
       }
 
-      .work-scheme__items {
-        display: grid;
-        grid-template-rows: repeat(5, 120px);
-        grid-auto-columns: 1fr;
-        grid-gap: 10px;
+      &-text {
+        color: $black;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+      }
 
-        @include breakpoint(md) {
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(2, 270px);
-        }
+      &.work-scheme__item-submit {
+        background: $brand;
 
-        @include breakpoint(lg) {
-          grid-gap: 20px;
-        }
-
-        @include breakpoint(xl) {
-          grid-template-rows: repeat(2, 250px);
-          grid-gap: 30px;
-        }
-
-        .work-scheme__item {
-          width: 100%;
-          padding: 12px;
+        &_check {
+          width: 40px;
+          height: 40px;
           background: $white;
-          border-radius: 16px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          border-radius: 8px;
+          @include flexCenterCenter;
+          margin-bottom: 16px;
+          padding: 8px;
+        }
 
-          @include breakpoint(md) {
-            padding: 30px;
+        &_text {
+          color: $white;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 130%;
+          margin-bottom: 16px;
+          max-width: 55%;
+
+          @include breakpoint(xl) {
+            max-width: 100%;
           }
+        }
 
-          .top {
-            @include flexCenterBetween;
-
-            .number {
-              width: 40px;
-              height: 40px;
-              padding: 10px;
-              background: $brand;
-              color: $white;
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 700;
-              text-transform: uppercase;
-              border-radius: 8px;
-              @include flexCenterCenter;
-            }
-
-            .arrow {
-              width: 40px;
-              height: 40px;
-              border-radius: 50%;
-              background: $light-gray;
-              padding: 8px;
-
-              svg {
-                width: 100%;
-                height: 100%;
-              }
-            }
-          }
-
-          .text {
-            color: $black;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 130%;
-          }
-
-          &.work-scheme__item-submit {
-            background: $brand;
-
-            .check {
-              width: 40px;
-              height: 40px;
-              background: $white;
-              border-radius: 8px;
-              @include flexCenterCenter;
-              margin-bottom: 16px;
-              padding: 8px;
-
-              svg {
-              }
-            }
-
-            .text {
-              color: $white;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 130%;
-              margin-bottom: 16px;
-              max-width: 55%;
-
-              @include breakpoint(xl) {
-                max-width: 100%;
-              }
-            }
-
-            .work-scheme__button {
-              padding: 12px 16px;
-            }
-          }
+        .work-scheme__button {
+          padding: 12px 16px;
         }
       }
     }
   }
+
 }
 
 .objects {
@@ -523,34 +447,33 @@
     padding-bottom: 80px;
   }
 
-  .container {
-    .objects__inner {
-      .objects__title {
-        color: $black;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 500;
-        margin-bottom: 30px;
-        @include breakpoint(md) {
-          margin-bottom: 40px;
-        }
 
-        @include breakpoint(lg) {
-          font-size: 36px;
-        }
-
-        @include breakpoint(xl) {
-          font-size: 40px;
-        }
+  .objects__inner {
+    .objects__title {
+      color: $black;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      margin-bottom: 30px;
+      @include breakpoint(md) {
+        margin-bottom: 40px;
       }
 
-      .objects__button-add {
-        padding: 16px 24px;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        margin: 0 auto;
+      @include breakpoint(lg) {
+        font-size: 36px;
       }
+
+      @include breakpoint(xl) {
+        font-size: 40px;
+      }
+    }
+
+    .objects__button-add {
+      padding: 16px 24px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      margin: 0 auto;
     }
   }
 }
@@ -597,7 +520,6 @@
         }
 
 
-
         .small-text {
           font-size: 20px;
           font-style: normal;
@@ -620,6 +542,7 @@
         @include breakpoint(hd) {
           max-width: 685px;
         }
+
         form {
           .questions__inputs {
             display: grid;
@@ -747,6 +670,7 @@
         display: flex;
         justify-content: space-between;
       }
+
       .partners__title {
         color: $black;
         font-size: 32px;

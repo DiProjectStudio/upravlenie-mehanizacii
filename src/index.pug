@@ -7,9 +7,9 @@ bodyClass: main-page
 extends includes/_page
 
 block main
-    section.main-banners
+    section.main-banner
         .container
-            .main-banners__inner
+            .main-banner__inner
                 .main-banner__image
                     +img('main-page/main-banner-image.png')
                 .image-filter
@@ -17,18 +17,18 @@ block main
                     source(srcset="assets/images/lightnings/top.png", media="(min-width: 1200px)")
                     +img('lightnings/top.png')
                 .main-banner__items
-                    .main-banner__item.main-banner__item-1.bg-orange
+                    .main-banner__item.bg-orange.text-white
                         .main-banner__item-name Водопонижение
                         .main-banner__item-text выполним работы или предоставим в аренду
-                    .main-banner__item.main-banner__item-2
+                    .main-banner__item.bg-black.text-white
                         .main-banner__item-name Аренда и продажа
                         .main-banner__item-text строительного оборудования
-                    .main-banner__item.main-banner__item-3
+                    .main-banner__item.bg-light-gray.text-black
                         .main-banner__item-name Щитовая и микрощитовая
                         .main-banner__item-text проходка
-                    .main-banner__item.main-banner__item-4
+                    .main-banner__item.bg-orange.text-white
                         .main-banner__item-name Изготовление металлоконструкций
-                    .main-banner__item.main-banner__item-5
+                    .main-banner__item.bg-light-gray.text-black
                         .main-banner__item-name Шахтные кольца крепления
     section.benefits
         .container
@@ -38,112 +38,110 @@ block main
                         .benefits-item__image
                             +img('benefits/01.svg')
                         .benefits-item__text
-                            .title Качественно
-                            .description Высокое качество продукции и производства работ. Контроль на всеx этапах
+                            .benefits-item__text-title Качественно
+                            .benefits-item__text-description Высокое качество продукции и производства работ. Контроль на всеx этапах
                     .benefits-item
                         .benefits-item__image
                             +img('benefits/02.svg')
                         .benefits-item__text
-                            .title Быстро
-                            .description Самые быстрые сроки выполнения заказов
+                            .benefits-item__text-title Быстро
+                            .benefits-item__text-description Самые быстрые сроки выполнения заказов
                     .benefits-item
                         .benefits-item__image
                             +img('benefits/03.svg')
                         .benefits-item__text
-                            .title Профессионально
-                            .description У нас работают профессионалы своего дела, квалифицированные специалисты
+                            .benefits-item__text-title Профессионально
+                            .benefits-item__text-description У нас работают профессионалы своего дела, квалифицированные специалисты
                     .benefits-item
                         .benefits-item__image
                             +img('benefits/04.svg')
                         .benefits-item__text
-                            .title Наш или ваш материал
-                            .description Вы можете предоставить свой материал, из которого мы изготовим продукцию
-
-
+                            .benefits-item__text-title Наш или ваш материал
+                            .benefits-item__text-description Вы можете предоставить свой материал, из которого мы изготовим продукцию
 
     section.services
         .container
             .services__inner
                 .services__title Наши услуги
                 .services__items
-                    .services__item.services__item-1
-                        .image
+                    .services__item.bg-gray-02.text-white
+                        .services__item-image
                             +img('services/water-proof.svg')
-                        .title Водопонижение
-                        .subtitles
-                            .subtitle Установка вакуумного водопонижения
-                            .subtitle Эжекторные установки
-                            .subtitle Водоотведение
-                    .services__item.services__item-2
-                        .image
+                        .services__item-title Водопонижение
+                        .services__item-description
+                            p Установка вакуумного водопонижения
+                            p Эжекторные установки
+                            p Водоотведение
+                    .services__item.bg-black.text-white
+                        .services__item-image
                             +img('services/rent.svg')
-                        .title Аренда оборудования
-                        .subtitles
-                            .subtitle Щит проходнический ПЩМ
-                            .subtitle Продавливание стального футляра (установки)
-                            .subtitle Тоннельная опалубка
-                            .subtitle Кран СПК-1000,2000
-                            .subtitle Микрощит AVN
-                    .services__item.services__item-3
-                        .image
+                        .services__item-title Аренда оборудования
+                        .services__item-description
+                            p Щит проходнический ПЩМ
+                            p Продавливание стального футляра (установки)
+                            p Тоннельная опалубка
+                            p Кран СПК-1000,2000
+                            p Микрощит AVN
+                    .services__item.bg-orange.text-white
+                        .services__item-image
                             +img('services/safety.svg')
-                        .title Выполняемые работы
-                        .subtitles
-                            .subtitle Устройство защитных экранов (под автодорогами, железнодорожными путями)
-                            .subtitle Устройство стальных и железобетонных футляров а также коллекторов под железнодорожными путями
-                            .subtitle Проходка шахтных стволов (деревянным креплением а также железобетонными кольцами) любых диаметров.
-                            .subtitle Устройство котлованов в трудных условиях
-                            .subtitle Щитовые проходки
-                            .subtitle Санация труб методом навивки а также труба в трубе
-                            .subtitle Бурошнековое бурение
-                    .services__item.services__item-4
-                        .image
+                        .services__item-title Выполняемые работы
+                        .services__item-description
+                            p Устройство защитных экранов (под автодорогами, железнодорожными путями)
+                            p Устройство стальных и железобетонных футляров а также коллекторов под железнодорожными путями
+                            p Проходка шахтных стволов (деревянным креплением а также железобетонными кольцами) любых диаметров.
+                            p Устройство котлованов в трудных условиях
+                            p Щитовые проходки
+                            p Санация труб методом навивки а также труба в трубе
+                            p Бурошнековое бурение
+                    .services__item.bg-light-gray.text-black
+                        .services__item-image
                             +img('services/rigging.svg')
-                        .title Металлоконструкции
-                        .subtitles
-                            .subtitle Шахтные кольца крепления
-                            .subtitle Секции ограждений
-                            .subtitle Лестницы для колодцев
-                            .subtitle Закладные детали и конструкции
+                        .services__item-title Металлоконструкции
+                        .services__item-description
+                            p Шахтные кольца крепления
+                            p Секции ограждений
+                            p Лестницы для колодцев
+                            p Закладные детали и конструкции
     section.work-scheme
         .container
             .work-scheme__inner
                 .work-scheme__title Схема работ
                 .work-scheme__items
                     .work-scheme__item
-                        .top
-                            .number 1
-                            .arrow
+                        .work-scheme__item-top
+                            .work-scheme__item-top_number 1
+                            .work-scheme__item-top_arrow
                                 +img('scheme/arrow-right.svg')
-                        .text Звонок, письмо на email, заявка через сайт
+                        .work-scheme__item-text Звонок, письмо на email, заявка через сайт
                     .work-scheme__item
-                        .top
-                            .number 2
-                            .arrow
+                        .work-scheme__item-top
+                            .work-scheme__item-top_number 2
+                            .work-scheme__item-top_arrow
                                 +img('scheme/arrow-right.svg')
-                        .text Согласование условий заказа
+                        .work-scheme__item-text Согласование условий заказа
                     .work-scheme__item
-                        .top
-                            .number 3
-                            .arrow
+                        .work-scheme__item-top
+                            .work-scheme__item-top_number 3
+                            .work-scheme__item-top_arrow
                                 +img('scheme/arrow-right.svg')
-                        .text Заключение договора
+                        .work-scheme__item-text Заключение договора
                     .work-scheme__item
-                        .top
-                            .number 4
-                            .arrow
+                        .work-scheme__item-top
+                            .work-scheme__item-top_number 4
+                            .work-scheme__item-top_arrow
                                 +img('scheme/arrow-right.svg')
-                        .text Оплата заказа
+                        .work-scheme__item-text Оплата заказа
                     .work-scheme__item
-                        .top
-                            .number 5
-                            .arrow
+                        .work-scheme__item-top
+                            .work-scheme__item-top_number 5
+                            .work-scheme__item-top_arrow
                                 +img('scheme/arrow-right.svg')
-                        .text Выполнение работ, предоставление оборудования
+                        .work-scheme__item-text Выполнение работ, предоставление оборудования
                     .work-scheme__item.work-scheme__item-submit
-                        .check
+                        .work-scheme__item-submit_check
                             +img('scheme/check.svg')
-                        .text Оставьте нам заявку, мы свяжемся с вами в ближайшее время
+                        .work-scheme__item-submit_text Оставьте нам заявку, мы свяжемся с вами в ближайшее время
                         a(href="javascript:void(0)").btn.btn-white.work-scheme__button Оставить заявку
     section.objects
         .container

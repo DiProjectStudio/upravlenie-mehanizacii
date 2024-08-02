@@ -193,7 +193,29 @@ a {
 /// OTHERS
 /////////////////////
 
+.bg-orange {
+  background-color: $brand;
+}
 
+.bg-black {
+  background-color: $black;
+}
+
+.bg-light-gray {
+  background-color: $light-gray;
+}
+
+.bg-gray-02 {
+  background-color: $gray-02;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-black {
+  color: $black;
+}
 
 /////////////////////
 /// CARDS & CATALOG
