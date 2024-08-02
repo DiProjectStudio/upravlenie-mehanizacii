@@ -10,19 +10,19 @@ block main
     +breadcrumbs('', ['Строительное водопонижение иглофильтрами — выполнение работ, аренда оборудования'])
     section.services-page
         .container
-            .services__inner
-                h1.services__inner-title Строительное водопонижение иглофильтрами — выполнение работ, аренда оборудования
-                .services__main-block.services__info-block
-                    .services__main-image.services__info-block_image
+            .services-page__inner
+                h1 Строительное водопонижение иглофильтрами — выполнение работ, аренда оборудования
+                .services__info-block
+                    .services__info-block_image
                         +img('services-page/main.png')
-                    .services__main-text.services__info-block_text
+                    .services__info-block_text
                         h2 Работы по водопонижению и аренда установок
                         p «Управление механизации 333» занимается выполнением работ по устройству строительного водопонижения в Москве, Московской области, Ленинградской области, Новгородской области, Тульской области, Калужской области, Рязанской области, Серпухове. Так же вы можете взять в аренду установку водопонижения и выполнить работы самостоятельно.
                         p Строительное водопонижение — это комплекс мер, обеспечивающих понижение уровня грунтовых вод в котлованах или траншеях на строительной площадке и его поддержание на время проведения строительных работ.
                         p Наши сотрудники имеют большой опыт по выполнению работ любой сложности, а оборудование позволяет понижать уровень грунтовых вод на глубине залегания до 20 метров.
-                        a(href='javascript:void(0)').btn.btn-orange.w100
-                            .text Оформить заявку на выполнение работ или аренду оборудования
-                            .arrow
+                        a(href='javascript:void(0)').btn.btn-orange.w100.btn-with-arrow
+                            .btn-text Оформить заявку на выполнение работ или аренду оборудования
+                            .btn-arrow
                                 +img('arrow-right.svg')
                         h3 Способы строительного водопонижения иглофильтрами
                         p Наличие грунтовых вод в зоне строительных работ затрудняет производство земляных работ. Без специальных мероприятий по их снижению или осушению часто невозможно выполнить работы.
@@ -31,7 +31,7 @@ block main
                             li эжекторные иглофильтры;
                             li установки вакуумного водопонижения.
                         p Способ понижения грунтовых вод и используемое оборудование определяется исходя из мощности водонасыщенного слоя, величины снижения уровня грунтовых вод, конструкции будущего сооружения, коэффициентов фильтрации водовмещающих грунтов.
-                .services__info-block.block-1
+                .services__info-block
                     .services__info-block_text
                         h2 Организация работ по устройству строительного водопонижения
                         p До начала работ по водопонижению уточняется расположение подземных коммуникаций, проверяется состояние сооружений в зоне понижения уровня грунтовых вод.
@@ -42,7 +42,7 @@ block main
                         p Работы по строительному водопонижению должны выполняться в соответствии с требованиями СП 45.13330.2017 «Земляные сооружения, основания и фундаменты». Актуализированная редакция СНиП 3.02.01–87, ВСН 127–91 и инструкций по эксплуатации используемого оборудования и механизмов.
                     .services__info-block_image
                         +img('services-page/1.png')
-                .services__info-block.block-2
+                .services__info-block
                     .services__info-block_text
                         h2 Стоимость работ по водопонижению
                         p На цену работ по выполнению понижения грунтовых вод иглофильтрами влияют много факторов:
@@ -81,9 +81,9 @@ block main
                                         tr
                                             td(colspan="2") Стоимость:
                                             td 2 000 000 ₽
-                        a(href='javascript:void(0)').btn.btn-orange
-                            .text Оформить заявку
-                            .arrow
+                        a(href='javascript:void(0)').btn.btn-orange.btn-with-arrow
+                            .btn-text Оформить заявку
+                            .btn-arrow
                                 +img('arrow-right.svg')
                     .services__info-block_image
                         +img('services-page/2.png')
@@ -95,45 +95,47 @@ block main
                         ul
                             li эжекторные иглофильтры;
                             li установки вакуумного водопонижения.
-                        a(href='javascript:void(0)').btn.btn-orange
-                            .text Оформить заявку
-                            .arrow
+                        a(href='javascript:void(0)').btn.btn-orange.btn-with-arrow
+                            .btn-text Оформить заявку
+                            .btn-arrow
                                 +img('arrow-right.svg')
                     .services__info-block_image
                         +img('services-page/3.png')
-                .services__info-block.objects-block
+
+
+                .objects-block
                     .services__info-block_text
                         h2 Выполнение водопонижения на объектах
                     .objects__items
                         .objects__item
-                            .image
+                            .objects__item-image
                                 +img('objects/object-1.png')
-                            .content
-                                .text
-                                    .title Водопонижение и строительство
-                                    .description Водопонижение и строительство водостока. Объект г.Москва станция Рижская
+                            .objects__item-content
+                                .objects__item-content_text
+                                    p Водопонижение и строительство
+                                    p Водопонижение и строительство водостока. Объект г.Москва станция Рижская
                                 .objects__button.btn.btn-transparent Оставить заявку
                         .objects__item
-                            .image
+                            .objects__item-image
                                 +img('objects/object-2.png')
-                            .content
-                                .text
-                                    .title Водопонижение и строительство
-                                    .description Водопонижение и строительство сети водопровода г.Подольск станция Подольск
+                            .objects__item-content
+                                .objects__item-content_text
+                                    p Водопонижение и строительство
+                                    p Водопонижение и строительство сети водопровода г.Подольск станция Подольск
                                 .objects__button.btn.btn-transparent Оставить заявку
                         .objects__item
-                            .image
+                            .objects__item-image
                                 +img('objects/object-3.png')
-                            .content
-                                .text
-                                    .title Водопонижение
-                                    .description Водопонижение Объект г.Москва Комсомольская площадь Строительство первоочередного парка для обслуживания поездов Сапсан
+                            .objects__item-content
+                                .objects__item-content_text
+                                    p Водопонижение
+                                    p Водопонижение Объект г.Москва Комсомольская площадь Строительство первоочередного парка для обслуживания поездов Сапсан
                                 .objects__button.btn.btn-transparent Оставить заявку
                         .objects__item
-                            .image
+                            .objects__item-image
                                 +img('objects/object-4.png')
-                            .content
-                                .text
-                                    .title Водопонижение
-                                    .description Водопонижение Объект г.Раменское ст.Раменское
+                            .objects__item-content
+                                .objects__item-content_text
+                                    p Водопонижение
+                                    p Водопонижение Объект г.Раменское ст.Раменское
                                 .objects__button.btn.btn-transparent Оставить заявку

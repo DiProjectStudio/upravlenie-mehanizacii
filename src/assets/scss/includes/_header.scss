@@ -50,6 +50,7 @@
 
 .header__top_inner {
   @include flexCenterBetween;
+  padding: 10px 0;
 
   .header__logo {
     @include flexAlignCenter;
