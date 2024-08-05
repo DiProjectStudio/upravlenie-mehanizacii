@@ -36,7 +36,7 @@ const fs = require('fs');
 
 /* Paths */
 const srcPath = 'src/';
-const distPath = 'www/';
+const distPath = 'dist/';
 
 const path = {
     build: {
