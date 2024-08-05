@@ -13,50 +13,50 @@ block main
     section.contacts
         .container
             .contacts__inner
-                .contacts__inner-text
+                .contacts__inner_text
                     h1 Контакты
-                    .contacts__text_block
-                        .title Фактический (почтовый) адрес:
-                        .description
-                            .image
+                    .contacts__inner_text-block
+                        p Фактический (почтовый) адрес:
+                        div
+                            div
                                 +img('header/location-marker.svg')
-                            .text г. Москва, ул. Талалихина, дом. 41, стр. 9
-                    .contacts__text_block
-                        .title Адрес производства:
-                        .description
-                            .image
+                            p г. Москва, ул. Талалихина, дом. 41, стр. 9
+                    .contacts__inner_text-block
+                        p Адрес производства:
+                        div
+                            div
                                 +img('header/location-marker.svg')
-                            .text г. Серпухов, ул. Пушкина, д. 45, Бизнес-парк «Развитие»
-                    .contacts__text_block
-                        .title Телефон/Факс:
-                        .description
-                            .image
+                            p г. Серпухов, ул. Пушкина, д. 45, Бизнес-парк «Развитие»
+                    .contacts__inner_text-block
+                        p Телефон/Факс:
+                        div
+                            div
                                 +img('header/phone.svg')
-                            .text
+                            p
                                 a(href="tel:79857864068") +7 985 786-40-68
-                    .contacts__text_block
-                        .title Email:
-                        .description
-                            .description__emails
-                                .email
-                                    .image
+                    .contacts__inner_text-block
+                        p Email:
+                        div
+                            .emails
+                                div
+                                    div
                                         +img('header/mail.svg')
-                                    .text
+                                    p
                                         a(href='mailto:info@ym333.ru') info@ym333.ru
-                                .email
-                                    .image
+                                div
+                                    div
                                         +img('header/mail.svg')
-                                    .text
+                                    p
                                         a(href='mailto:aoym333@gmail.com') aoym333@gmail.com
 
                 .contacts__inner-map
                     script.
-                      let placemarks = [
-                          {
-                              coordinates: [55.72822400966594,37.68620459126282],
-                          }
+                        let placemarks = [
+                            {
+                                coordinates: [55.72822400966594, 37.68620459126282],
+                            }
                         ];
-                      let centerPoint = [55.72822400966594,37.68550459126282];
-                      let zoomValue = 17;
+                        let centerPoint = [55.72822400966594, 37.68550459126282];
+                        let zoomValue = 17;
                     .map__wrapper
                         #map

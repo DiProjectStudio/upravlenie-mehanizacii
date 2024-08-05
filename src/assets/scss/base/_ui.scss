@@ -8,14 +8,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: .4s;
-  //color: $black-main-page;
 }
 
 body.overflow-hidden {
   overflow: hidden;
 }
-
-
 
 body b {
   font-weight: 700;
@@ -281,7 +278,6 @@ h2 {
   @include breakpoint(md) {
     font-size: 32px;
   }
-
 }
 
 h3 {
