@@ -12,11 +12,10 @@ block main
         .container
             .order__inner
                 h1 Заявка на покупку оборудования и материалов
-
                 form
                     .order__inner-form
                         .form-inputs
-                            .form-input-top
+                            .form-inputs-top
                                 .form-input
                                     input(type='text' placeholder='Ваше имя*').input
                                 .form-input.phone-mask
@@ -25,12 +24,12 @@ block main
                                     input(type='text' placeholder='Электронная почта')
                                 .form-input
                                     textarea(placeholder='Комментарий к заявки')
-                            .form-input-bottom
+                            .form-inputs-bottom
                                 p Поля, отмеченные символом * обязательные для заполнения.
                                 .button
-                                    a.btn.btn-orange
-                                        .text Отправить
-                                        .arrow
+                                    a.btn.btn-orange.btn-with-arrow
+                                        .btn-text Отправить
+                                        .btn-arrow
                                             +img('arrow-right.svg')
                                     .agree Отправляя данные, вы соглашаетесь с политикой конфиденциальности, на сбор и обработку персональных данных.
 
@@ -47,4 +46,44 @@ block main
                             label.form-checkbox Шахтный электровоз АРП2Т
                                 input(type='checkbox')
                                 span
+                            .form-checkbox.with-count
+                                label Блоки Б-2
+                                    input(type='checkbox')
+                                    span
+                                .count
+                                    .minus
+                                        +img('minus.svg')
+                                    input(type='number', value=0)
+                                    .plus
+                                        +img('plus.svg')
+                            .form-checkbox.with-count
+                                label Блоки Б-2
+                                    input(type='checkbox')
+                                    span
+                                .count
+                                    .minus
+                                        +img('minus.svg')
+                                    input(type='number', value=0)
+                                    .plus
+                                        +img('plus.svg')
+                            .form-checkbox.with-count
+                                label Блоки Б-2
+                                    input(type='checkbox')
+                                    span
+                                .count
+                                    .minus
+                                        +img('minus.svg')
+                                    input(type='number', value=0)
+                                    .plus
+                                        +img('plus.svg')
+                            .form-checkbox.with-count
+                                label Блоки Б-2
+                                    input(type='checkbox')
+                                    span
+                                .count
+                                    .minus
+                                        +img('minus.svg')
+                                    input(type='number', value=0)
+                                    .plus
+                                        +img('plus.svg')
 
