@@ -1,0 +1,41 @@
+mixin objects(title)
+
+    .objects
+        .container
+            .objects__inner
+                .objects__title= title
+                .objects__items
+                    .objects__item
+                        .objects__item-image
+                            +img('objects/object-1.png')
+                        .objects__item-content
+                            .objects__item-content_text
+                                p Водопонижение и строительство
+                                p Водопонижение и строительство водостока. Объект г.Москва станция Рижская
+                            .objects__button.btn.btn-transparent Оставить заявку
+                    .objects__item
+                        .objects__item-image
+                            +img('objects/object-2.png')
+                        .objects__item-content
+                            .objects__item-content_text
+                                p Водопонижение и строительство
+                                p Водопонижение и строительство сети водопровода г.Подольск станция Подольск
+                            .objects__button.btn.btn-transparent Оставить заявку
+                    .objects__item
+                        .objects__item-image
+                            +img('objects/object-3.png')
+                        .objects__item-content
+                            .objects__item-content_text
+                                p Водопонижение
+                                p Водопонижение Объект г.Москва Комсомольская площадь Строительство первоочередного парка для обслуживания поездов Сапсан
+                            .objects__button.btn.btn-transparent Оставить заявку
+                    .objects__item
+                        .objects__item-image
+                            +img('objects/object-4.png')
+                        .objects__item-content
+                            .objects__item-content_text
+                                p Водопонижение
+                                p Водопонижение Объект г.Раменское ст.Раменское
+                            .objects__button.btn.btn-transparent Оставить заявку
+            if bodyClass === 'main-page'
+                .objects__button-add.btn.btn-orange Ещё объекты

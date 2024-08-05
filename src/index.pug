@@ -5,6 +5,7 @@ bodyClass: main-page
 ---
 
 extends includes/_page
+include components/_objects
 
 block main
     section.main-banner
@@ -143,44 +144,8 @@ block main
                             +img('scheme/check.svg')
                         .work-scheme__item-text Оставьте нам заявку, мы свяжемся с вами в ближайшее время
                         a(href="javascript:void(0)").btn.btn-white.work-scheme__button Оставить заявку
-    section.objects
-        .container
-            .objects__inner
-                .objects__title Фото объектов
-                .objects__items
-                    .objects__item
-                        .objects__item-image
-                            +img('objects/object-1.png')
-                        .objects__item-content
-                            .objects__item-content_text
-                                p Водопонижение и строительство
-                                p Водопонижение и строительство водостока. Объект г.Москва станция Рижская
-                            .objects__button.btn.btn-transparent Оставить заявку
-                    .objects__item
-                        .objects__item-image
-                            +img('objects/object-2.png')
-                        .objects__item-content
-                            .objects__item-content_text
-                                p Водопонижение и строительство
-                                p Водопонижение и строительство сети водопровода г.Подольск станция Подольск
-                            .objects__button.btn.btn-transparent Оставить заявку
-                    .objects__item
-                        .objects__item-image
-                            +img('objects/object-3.png')
-                        .objects__item-content
-                            .objects__item-content_text
-                                p Водопонижение
-                                p Водопонижение Объект г.Москва Комсомольская площадь Строительство первоочередного парка для обслуживания поездов Сапсан
-                            .objects__button.btn.btn-transparent Оставить заявку
-                    .objects__item
-                        .objects__item-image
-                            +img('objects/object-4.png')
-                        .objects__item-content
-                            .objects__item-content_text
-                                p Водопонижение
-                                p Водопонижение Объект г.Раменское ст.Раменское
-                            .objects__button.btn.btn-transparent Оставить заявку
-                .objects__button-add.btn.btn-orange Ещё объекты
+    +objects('Фото объектов')
+
     section.questions
         .questions__bg
             +img('questions/questions-image.png')

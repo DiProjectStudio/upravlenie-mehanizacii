@@ -1,3 +1,46 @@
+.objects {
+  background: $white;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include breakpoint(md) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__inner {
+    .objects__title {
+      color: $black;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      margin-bottom: 30px;
+      @include breakpoint(md) {
+        margin-bottom: 40px;
+      }
+
+      @include breakpoint(lg) {
+        font-size: 36px;
+      }
+
+      @include breakpoint(xl) {
+        font-size: 40px;
+      }
+    }
+
+
+  }
+}
+
+.objects__button-add {
+  padding: 16px 24px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 40px auto 0;
+}
+
+
+
 .objects__items {
   display: grid;
   grid-auto-columns: 1fr;
