@@ -1,233 +1,94 @@
 .popup {
   display: none;
-
-  .form {
-    margin-top: 16px;
-    width: 100%;
-
-    .form-action {
-      text-align: center;
-
-      .btn {
-        width: 224px;
-        @include breakpoint(lg) {
-          width: 254px;
-        }
-
-        &.disabled {
-          //background-color: $gray-main-page;
-          cursor: not-allowed;
-        }
-      }
-
-    }
-  }
-}
-
-.form {
-  .form-row ~ .form-row {
-    margin-top: 20px;
+  &__title {
+    color: $black;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 40px;
   }
 
-  .form-row {
-    label {
-      margin-bottom: 4px;
-      line-height: 150%;
-    }
+  &.fancybox__content {
+    border-radius: 20px;
+    padding: $container;
+    box-sizing: border-box;
 
-    position: relative;
-
-    &::after {
-      position: absolute;
-      display: block;
-      content: '*';
-      color: red;
-      font-size: 16px;
-      top: 36px;
-      left: 16px;
-    }
-  }
-
-  .form-action {
-
-    .btn {
-      margin: 24px 0 8px;
-      @include breakpoint(md) {
-        margin-top: 32px;
-      }
-    }
-
-    p {
-      //color: $gray-main-page;
-      font-size: 12px;
-
-      a {
-        display: inline;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .link-forget, .link-change {
-    margin-top: 20px;
-    cursor: pointer;
-  }
-
-  .toggle-password-mask {
-    @include flexCenterCenter;
-    cursor: pointer;
-    position: absolute;
-    right: 16px;
-    bottom: 12px;
-    &:hover {
-      svg path {
-        //fill: $opacity-black-72;
-      }
-    }
-  }
-}
-
-
-.auth-form {
-
-  .hide {
-    display: none;
-    animation: fadeOut .4s forwards;
-  }
-
-  .show {
-    display: block;
-    animation: fadeIn .4s forwards;
-  }
-}
-
-.popup-review-form {
-  .form-row:first-child {
-    &::after {
-      display: none;
-    }
-
-    .stars {
-      .stars-item {
-        cursor: pointer;
-
-        &:hover {
-          //background-image: url("../images/icon_star-filled.svg");
-        }
-
-        &:nth-child(2) {
-          &:hover {
-            &:first-child, &:nth-child(2) {
-              //background-image: url("../images/icon_star-filled.svg");
-
-            }
-          }
-        }
-
-      }
-    }
-  }
-  .reviews__item-score {
-    @include flexAlignCenter;
-    gap: 8px;
-
-    svg {
-      cursor: pointer;
-      width: 24px;
+    .carousel__button.is-close {
+      width: 44px;
+      height: 44px;
+      background: $brand;
+      border-radius: 10px;
+      top: $container;
+      right: $container;
+      transition: $transition;
 
       &:hover {
-        svg path {
-          //fill: $black-main-page;
-        }
+        background-color: $hover-button-orange;
       }
     }
   }
 }
 
-.popup-choice {
-  @include flexCenterCenter;
-  .choice-option {
-    font-weight: 500;
-    padding: 8px 24px;
-    //border-bottom: 2px solid $gray-light-main-page;
-    cursor: pointer;
+.popup__inputs {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-    &.active {
-      //border-bottom-color: $black-main-page;
-    }
+.popup__input {
+  textarea {
+    resize: none;
+    height: 160px;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 20px;
+    color: $black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 10px;
+    background: $light-gray;
+    border: 0;
   }
 }
 
-.popup {
-  padding: 56px 16px 16px;
-  align-items: center;
-  @include breakpointCustom(490px) {
-    width: 464px;
-    padding: 52px 20px 20px;
-  }
+.button {
+  display: grid;
+  gap: 20px;
 
-  @include breakpoint(xl) {
-    width: 560px;
-    padding: 64px 32px 32px;
+  .btn {
+    width: 100%;
   }
+}
+
+.agree {
+  color: $black;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  width: 100%;
+}
+
+.hidden-input {
+  display: none;
 }
 
 .popup-success {
-  .popup-actions {
-    .btn {
-      width: 254px;
-    }
+  .popup__title {
+    margin-top: 50px;
   }
 
-}
-
-.popup-actions {
-  margin-top: 24px;
-  @include flexCenterCenter;
-  gap: 16px;
-  width: 100%;
-  @include breakpointMax(md) {
-    flex-direction: column;
-  }
-
-  .btn {
-    padding: 16px;
-    width: 254px;
-    @include breakpoint(md) {
-      width: 50%;
-    }
-    @include breakpoint(lg) {
-      width: 254px;
-    }
-
-  }
-}
-
-.popup-title {
-  font-weight: 500;
-  line-height: 110%;
-  font-size: 26px;
-  margin-bottom: 24px;
-  text-align: center;
-  @include breakpoint(md) {
-    font-size: 32px;
-  }
-}
-
-.popup-subtitle {
-  text-align: center;
-  //color: $opacity-black-72;
-  width: 94%;
-}
-
-.fancybox__content > .carousel__button.is-close {
-  top: 10px;
-  right: 10px;
-  //color: $black-main-page;
-  --carousel-button-svg-stroke-width: 2;
-  --carousel-button-svg-filter: 0;
-  @include breakpoint(xl) {
-    top: 20px;
-    right: 20px;
+  .popup__subtitle {
+    color: $black;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 40px;
   }
 }

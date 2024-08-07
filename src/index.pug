@@ -5,7 +5,6 @@ bodyClass: main-page
 ---
 
 extends includes/_page
-include components/_objects
 
 block main
     section.main-banner
@@ -145,7 +144,6 @@ block main
                         .work-scheme__item-text Оставьте нам заявку, мы свяжемся с вами в ближайшее время
                         a(href="javascript:void(0)").btn.btn-white.work-scheme__button Оставить заявку
     +objects('Фото объектов')
-
     section.questions
         .questions__bg
             +img('questions/questions-image.png')

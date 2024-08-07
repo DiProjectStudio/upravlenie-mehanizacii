@@ -1,7 +1,10 @@
-include _mixins
-
 doctype html
 html(lang="ru")
+
+    include _mixins
+    include ../components/_objects
+    include ../components/_object
+
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -39,6 +42,11 @@ html(lang="ru")
             block footer
                 include _footer
             // Footer::End
+
+        // Popup::Start
+
+        include ../components/_popup
+        // Popup::End
 
 
         // Scripts::Start

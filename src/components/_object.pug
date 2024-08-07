@@ -1,0 +1,9 @@
+mixin object(title, description, index)
+    .objects__item
+        .objects__item-image
+            +img(`objects/object-${index + 1}.png`)
+        .objects__item-content
+            .objects__item-content_text
+                p= title
+                p= description
+            .objects__button.btn.btn-transparent.js-dynamic-info(data-src='#popup-request' data-fancybox data-info=description) Оставить заявку
