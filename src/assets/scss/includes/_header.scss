@@ -112,7 +112,6 @@
 
     .header__phone {
       @include flexAlignCenter;
-      width: fit-content;
 
       .header__phone-text {
         margin-left: 6px;
@@ -129,7 +128,6 @@
 
     .header__address, .header__mail {
       display: none;
-      width: fit-content;
 
       @include breakpoint(lg) {
         @include flexAlignCenter;
@@ -197,6 +195,7 @@ nav.header__menu-nav {
     right: 0;
     width: 24px;
     height: 24px;
+    cursor: pointer;
 
     @include breakpoint(lg) {
       display: none;
