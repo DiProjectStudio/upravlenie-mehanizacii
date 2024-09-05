@@ -1,7 +1,9 @@
 mixin object(title, description, index)
     .objects__item
-        .objects__item-image
-            +img(`objects/object-${index + 1}.png`)
+        .objects__item-image.swiper
+            .swiper-wrapper
+                .swiper-slide(data-fancybox='gallery' data-src=`assets/images/objects/object-${index + 1}.png`)
+                    +img(`objects/object-${index + 1}.png`)
         .objects__item-content
             .objects__item-content_text
                 p= title

@@ -74,6 +74,7 @@
       height: 183px;
       width: auto;
       border-radius: 16px;
+      cursor: zoom-in;
 
       @include breakpoint(lg) {
         height: 100%;
